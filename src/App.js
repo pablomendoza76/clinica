@@ -1,15 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login"; // Importa el componente Login
-import Inicio from "./components/inicio"; // Importa el componente Inicio
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Recuperar from "./components/recuperar"; // Asegúrate de importar la página de recuperación
 
 function App() {
   return (
-    // Aquí envolvemos todo el contenido con Router para habilitar el uso de navegación
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} /> {/* Ruta de login */}
-        <Route path="/inicio" element={<Inicio />} /> {/* Ruta de inicio */}
+        <Route path="/" element={<Login />} />
+        <Route path="/recuperar" element={<Recuperar />} />
+        <Route path="/inicio" element={<inicio />} />
       </Routes>
     </Router>
   );
